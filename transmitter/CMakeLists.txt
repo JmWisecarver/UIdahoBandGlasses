@@ -6,7 +6,7 @@ project(transmitter)
 set(CMAKE_BUILD_TYPE Debug)
 
 find_path(FTDI_INCLUDE_DIR 
-  names ftdi.h
+  names ftd2xx.h
   paths /usr/include
         /usr/local/include
         /opt/local/include
@@ -15,7 +15,7 @@ find_path(FTDI_INCLUDE_DIR
 )
 
 find_library(FTDI_LIBRARY
-  names ftdi ftdi1
+  names libftd2xx.so
   paths /usr/lib
         /usr/local/lib
         /opt/local/lib
